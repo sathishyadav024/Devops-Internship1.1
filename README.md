@@ -10,20 +10,20 @@ This project containerizes the Medusa backend with PostgreSQL as the database an
 The Medusa backend is built using Node.js and the Medusa framework, serving as the core e-commerce service.
 
 ### `PostgreSQL Integration:`
-```
+
 PostgreSQL is used as the main relational database to store product, customer, and order data for the Medusa backend.
-```
+
 ### `Redis Integration:`
-```
+
 Redis is utilized as a caching layer to improve the performance of data retrieval and manage background tasks.
-```
+
 ### `Docker and Docker Compose:`
-```
+
 Docker images are built for each service (Medusa, PostgreSQL, Redis).
 
 Docker Compose handles the orchestration of these services, ensuring they run together smoothly.
 
-```
+
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sathish-gurka)
