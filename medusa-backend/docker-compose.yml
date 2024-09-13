@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  medusa:
+    build: .
+    environment:
+      - MEDUSA_DB_TYPE=postgres
+      - MEDUSA_DB_URL=postgres://medusa:sathish@db:5432/medusadb
+      - MEDUSA_REDIS_URL=redis://redis:6379
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - .:/app
+    command: bash -c "npx medusa migrations run && npx medusa develop"
+    restart: on-failure
+
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_USER=medusa
+      - POSTGRES_PASSWORD=sathish
+      - POSTGRES_DB=medusadb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+
+volumes:
+  postgres_data:
+
