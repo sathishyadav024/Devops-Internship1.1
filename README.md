@@ -6,9 +6,9 @@ This project containerizes the Medusa backend with PostgreSQL as the database an
 ## `Process Overview:`
 
 ### `Medusa Backend Setup:`
-```
+
 The Medusa backend is built using Node.js and the Medusa framework, serving as the core e-commerce service.
-```
+
 ### `PostgreSQL Integration:`
 ```
 PostgreSQL is used as the main relational database to store product, customer, and order data for the Medusa backend.
